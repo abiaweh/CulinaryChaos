@@ -1,0 +1,579 @@
+/* Author: Abia Moosuddee
+Date: 29 May 2025
+Version: Week 13
+*/
+
+/* 
+COLOURS 
+#3b2f2f - black coffee (primary text color)
+#a16848 - cafe au lait (links color)
+#f4dba2 - light buff (nav links & footer text color)
+#fffdd0 - cream (content background color)
+*/
+
+/* GLOBAL SETTING
+----------------------------------------
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&family=Xanh+Mono:ital@0;1&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Inclusive+Sans:ital,wght@0,300..700;1,300..700&family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&family=Xanh+Mono:ital@0;1&display=swap');
+
+
+/* GLOBAL STYLES
+----------------------------------------
+*/
+
+/* HOMEPAGE STYLES
+----------------------------------------
+*/
+body {
+    font-size: 14px;
+    font-weight: 300;
+    font-family: 'Inknut Antiqua', serif; /* Main font for headings */
+    color: #3b2f2f; /* black coffee - primary text color */ 
+}
+
+/* Centers the overall layout on large screens */
+#wrapper {
+    position: relative;
+    max-width: 1200px; /* centers content and keeps layout contained */
+    width: 90%;
+    margin: 0 auto;
+}
+
+p {
+    font-family: 'Inclusive Sans', sans-serif; /* sans-serif for paragraph readability */
+}
+
+a {
+    font-family: 'Inclusive Sans', sans-serif; /* consistent for all links */
+    color: #a16848; /* cafe au lait */ 
+}
+
+a:hover {
+    color: #f4dba2; /* light buff */  
+}
+
+a:visited {
+    color:  #a16848; /* cafe au lait */
+}
+
+/* HEADER
+-------------------------------------------------- */
+
+header {
+    background-color: #3b2f2f ; /* black coffee */ 
+    height: 70px;
+    border-radius: 20px; /* rounded corners on header for a softer look */
+}
+
+header h1 {
+    visibility: hidden; /* Hides text while keeping it accessible for screen readers */
+}
+
+header img {
+    position: relative;
+    padding: 0 10px; /* adds space between logo image and left edge */
+    bottom: 10%;
+    z-index: 999;
+    width: 120px;
+}
+    
+/* NAVIGATION
+-------------------------------------------------- */
+
+nav {
+    background-color: transparent;
+    position: absolute; /* allows it to sit over the header */
+    padding-top: 18px;
+    display: flex;
+    justify-content: center; /* centers nav horizontally */
+    top: 0px; 
+    left: 0px;
+    width: 100%;
+}
+
+nav a {
+    display: inline-block;
+    box-sizing: border-box;
+    color: #f4dba2; /* light buff */
+    text-decoration: none;
+    text-align: center;
+    font-family: 'Inclusive Sans', sans-serif;
+    font-size: 15px;
+    padding: 10px 4px;
+}
+
+nav a:hover {
+    text-decoration: none;
+    color: #a16848; /* cafe au lait */
+}
+
+nav a:visited {
+    color: #f4dba2; /* light buff */
+}
+
+nav ul {
+    list-style: none; /* removes bullet points from nav list */
+    display: flex; /* places list items in a row */
+    gap: 40px; /* adds space between nav items */
+    margin: 0;
+    padding: 0;
+}
+
+nav span {
+    color: #a16848; /* cafe au lait */
+    display: inline-block;
+    box-sizing: border-box;
+    text-decoration: none;
+    text-align: center;
+    font-family: 'Inclusive Sans', sans-serif;
+    font-size: 15px;
+    padding: 10px 4px;
+}
+
+/* CONTENT 1
+----------------------------------------
+*/
+#columns {
+    text-align: center;
+    padding: 20px 50px;
+}
+
+#columns h2 {
+    font-size: 22px;
+}
+
+#columns p {
+    line-height: 1.2;
+    font-size: 1.1em;
+    padding: 0 30px;
+}
+
+#columns a {
+    display: inline-block;
+    font-weight: bold;
+    text-decoration: none;
+    border-bottom: 2px solid #a16848;
+    transition: all 0.3s ease;
+}
+
+#columns a:hover {
+    color: #f4dba2; /* light buff */
+}
+
+/* CONTENT 2
+----------------------------------------
+*/
+#favourites {
+    background-color: #fffdd0; /* cream */
+    padding: 10px;
+    margin: auto;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.06)
+}
+
+#favourites h2 {
+    margin-bottom: auto;
+}
+
+#favourites .image-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+}
+
+#favourites .image-wrapper a {
+    display: block;
+    text-align: center;
+    max-width: 250px;
+}
+
+#favourites img {
+    border-radius: 10px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+#favourites a:hover img {
+    transform: scale(1.02);
+}
+
+#favourites p {
+    margin-top: 0.5em;
+    font-weight: 400;
+}
+
+#favourites a:hover p {
+    color: #f4dba2; /* light buff */
+    text-decoration: none;
+}
+
+/* SIDEBAR
+----------------------------------------
+*/
+/* Flex container for side-by-side sidebar sections */
+.sidebar-container {
+    display: flex;
+    gap: 20px; /* spacing between sidebars */
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 1em 0;
+}
+
+.sidebar-box {
+    flex: 1 1 300px;
+    padding: 1em;
+    border-left: 6px solid #3b2f2f; /* decorative border in black coffee color */ 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1)
+}
+
+/* Images */
+.sidebar-box img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px; /* soft corners */
+    display: block; /* removes extra spacing under the image */
+    margin: 1em 0;
+    transition: transform 0.2s ease-in-out;
+}
+
+.sidebar-box img:hover {
+    transform: scale(1.02); 
+}
+
+/* Headings */
+.sidebar-box h2 {
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+}
+
+.sidebar-box p {
+    font-size: 1em;
+    line-height: 1.3; /* add more space between lines */
+    margin-bottom: 1em;
+}
+
+aside section a {
+    text-decoration: none;
+    font-size: 1.1em;
+}
+
+aside section a:hover {
+    color: #f4dba2; /* light buff */
+}
+
+/* FOOTER
+----------------------------------------
+*/
+footer {
+    background-color: #3b2f2f;
+    color: #f4dba2;
+    font-family: 'Inclusive Sans', sans-serif;
+    padding: 1em 1.5em;
+    margin-top: 1em;
+    text-align: left;
+}
+
+footer ul {
+    list-style: none; /* removes bullets */
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+/* RECIPES PAGE STYLES
+----------------------------------------
+*/
+
+/* CONTENT AREA 1
+----------------------------------------
+*/
+#recipes {
+    background-color: #fffdd0; /* cream */
+    padding: 10px;
+    margin: auto;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.06)
+}
+
+.image-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+}
+    
+.recipe-card {
+    text-align: center;
+    max-width: 280px;
+}
+
+.recipe-card a {
+    display: block;
+    text-align: center;
+    width: 100%;
+    max-width: 100%;
+}
+
+.recipe-card img {
+    width: 100%; /* fill the card’s width */
+    aspect-ratio: 1 / 1;      
+    object-fit: cover; /* fill the box, crop excess, never distort */
+    border-radius: 10px;
+    box-shadow: 0 4px 16px rgba(0,0,0,.1);
+    transition: transform .2s ease-in-out;
+}
+
+#recipes img {
+    border-radius: 10px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    width: 100%; height: auto;
+    transition: transform 0.2s ease-in-out;
+}
+
+#recipes a:hover img {
+    transform: scale(1.02);
+}
+
+#recipes p {
+    font-weight: 400;
+}
+
+#recipes section h3 {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+/* SIDEBAR
+----------------------------------------
+*/
+#vibe-sidebar {
+    border-left: 6px solid #3b2f2f; /* decorative border in black coffee color */ 
+    padding: 20px;
+    margin-top: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* soft shadow for depth */
+    max-width: 100%; 
+    margin: auto;
+}
+
+#vibe-sidebar h2 {
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+}
+
+#vibe-sidebar p {
+    font-size: 1.1em;
+    line-height: 1.2; /* line spacing text for readability */
+    padding-right: 30px; /* extra space on the right of the text to avoid hugging the edge */
+}
+
+/* Flex container for iframe and text content */
+.sidebar-flex {
+    display: flex; /* horizontal layout */
+    gap: 20px; /* spacing between iframe and text */
+    flex-wrap: wrap; /* allows wrapping on smaller screens */
+}
+
+/* Embedded Spotify playlist styling */
+.sidebar-flex iframe {
+    border: none;
+    flex: 1 1 360px; /* flex with base width, allowing shrink and grow */
+    max-width: 100%;
+    height: 352px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1); /* light shadow for pop-out effect */
+}
+
+/* Text content next to iframe */
+.vibe-text {
+    flex: 1 1 300px; /* flex with base width, allowing shrink and grow */
+    min-width: 300px; /* ensures readable width for text */
+}
+
+/* TIPS PAGE STYLES
+----------------------------------------
+*/
+
+/* CONTENT AREA 1
+----------------------------------------
+*/
+
+/* Flex container for side-by-side sidebar sections */
+.tips-container {
+    display: flex;
+    gap: 20px; /* spacing between sidebars */
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 1em 0;
+}
+
+.tips-box {
+    flex: 1 1 300px;
+    padding: 1em;
+    border-left: 6px solid #3b2f2f; /* decorative border in black coffee color */ 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1)
+}
+
+/* Images */
+.tips-box img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px; /* soft corners */
+    display: block; /* removes extra spacing under the image */
+    margin: 1em 0;
+    transition: transform 0.2s ease-in-out;
+}
+
+.tips-box img:hover {
+    transform: scale(1.02); 
+}
+
+/* Headings */
+.tips-box h2 {
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+}
+
+.tips-box p {
+    font-size: 1em;
+    line-height: 1.3; /* add more space between lines */
+    margin-bottom: 1em;
+    padding-right: 30px;
+}
+
+/* ABOUT PAGE STYLES
+----------------------------------------
+*/
+
+/* CONTENT AREA
+----------------------------------------
+*/
+
+/* NOTE: Minor nav shift on the About page, likely due to layout spacing. I struggled to figure out how to fix it. */
+#about {
+    text-align: center;
+    padding: 20px 50px;
+}
+
+#about h2 {
+    font-size: 22px;
+}
+
+#about p {
+    line-height: 1.2;
+    font-size: 1.1em;
+    padding: 0 30px;
+}
+
+/* CONTACT PAGE STYLES
+----------------------------------------
+*/
+
+/* CONTENT AREA 1
+----------------------------------------
+*/
+
+#contact {
+    padding: 10px;
+    margin: 2em auto;
+    max-width: 100%;
+    text-align: center;
+}
+
+#contact h2 {
+    font-size: 1.4em;
+    margin-bottom: 1em;
+}
+
+#contact address {
+    font-family: 'Inclusive Sans', sans-serif;
+    font-style: normal;
+    font-size: 1.05em;
+    line-height: 1.2;
+}
+
+#contact a {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+#contact a:hover {
+    text-decoration: none;
+}
+
+/* SIDEBAR
+----------------------------------------
+*/
+#sidebar-box {
+    border-left: 6px solid #3b2f2f; /* decorative border in black coffee color */ 
+    display: flex;
+    padding: 2em;
+    margin: 2em auto;
+    width: auto;
+    height: auto;
+    border-radius: 10px;
+    text-align: center;
+    font-family: 'Segoe UI', sans-serif;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+#sidebar-box p {
+    font-size: 1.2em;
+    font-style: italic;
+    margin-bottom: 1em;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 700px) {
+    #columns, #about {
+        padding: 10px 20px;
+  }
+    
+    nav a, nav span {
+        font-size: 14px;
+        padding: 8px 11px;
+        align-items: center;
+  }
+    
+    .image-wrapper, .sidebar-container, .tips-container {
+        flex-direction: column;
+        align-items: center;
+  }
+    
+    .sidebar-box, .tips-box, .recipe-card {
+        max-width: 100%;
+  }
+    
+    .vibe-text {
+        min-width: 100%;
+  }
+    
+    footer {
+        font-size: 0.9em;
+        text-align: center;
+  }
+    
+    footer ul {
+        align-items: center;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
