@@ -1,4 +1,0 @@
-touch .nojekyll          # create the empty file
-git add .nojekyll
-git commit -m "Disable Jekyll so images deploy"
-git push origin main
